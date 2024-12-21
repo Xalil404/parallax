@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Cantata+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*                                               Home page (Los Angeles)                                               */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: "Cantata One", serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 600vw; /* 6 sections, each 100vw */
+}
+
+.section {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 2.5s ease;
+}
+
+#section1 { background: url('https://res.cloudinary.com/dnbbm9vzi/image/upload/v1734786232/pexels-pixabay-237325_gwsyyt.jpg') no-repeat center center/cover; }
+#section2 { background: url('https://res.cloudinary.com/dnbbm9vzi/image/upload/v1734786312/pexels-daniel-semenov-595035-1688186_gkwjw2.jpg') no-repeat center center/cover; }
+#section3 { background: url('https://res.cloudinary.com/dnbbm9vzi/image/upload/v1734786379/pexels-belle-co-99483-405140_qgfycv.jpg') no-repeat center center/cover; }
+#section4 { background: url('https://res.cloudinary.com/dnbbm9vzi/image/upload/v1734786498/pexels-enric-cruz-lopez-6039252_dvsh2c.jpg') no-repeat center center/cover; }
+#section5 { background: url('https://res.cloudinary.com/dnbbm9vzi/image/upload/v1734786619/pexels-leif-bergerson-99376750-9582593_s8igqc.jpg') no-repeat center center/cover; }
+#section6 { background: url('https://res.cloudinary.com/dnbbm9vzi/image/upload/v1734786695/pexels-belle-co-99483-672915_tm8hxe.jpg') no-repeat center center/cover; }
+
+/* Content Styling */
+.content h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.content p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+
+/* Custom positions for content */
+#section1 .content {
+    position: absolute;
+    bottom: 10%; /* Adjust the text to the bottom */
+    left: 5%; /* Adjust from the left */
+    text-align: center; /* Align text to the left */
+    color: aliceblue;
+}
+
+#section2 .content {
+    display: flex;               /* Enable flexbox on the container */
+    flex-direction: column;      /* Stack elements vertically */
+    justify-content: flex-start; /* Align content to the top */
+    align-items: center;         /* Horizontally center the content */
+    height: 75%;                /* Ensure the section takes the full height of the viewport */
+    color: aliceblue;            /* Text color */
+    text-align: center;          /* Center the text */
+}
+
+
+#section3 .content {
+    display: flex;               /* Enable flexbox on the container */
+    flex-direction: column;      /* Stack elements vertically */
+    justify-content: flex-start; /* Align content to the top */
+    align-items: flex-end;       /* Align content to the right */
+    height: 90%;                /* Ensure the section takes the full height of the viewport */
+    width: 80%;
+    color: rgb(4, 4, 4);            /* Text color */
+    text-align: right;
+}
+
+#section4 .content {
+    display: flex;               /* Enable flexbox on the container */
+    flex-direction: column;      /* Stack elements vertically */
+    justify-content: flex-start; /* Align content to the top */
+    align-items: flex-end;       /* Align content to the right */
+    height: 80%;                /* Ensure the section takes the full height of the viewport */
+    width: 75%;
+    color: aliceblue;              /* Text color */
+    text-align: right;
+}
+
+#section5 .content {
+    display: flex;               /* Enable flexbox on the container */
+    flex-direction: column;      /* Stack elements vertically */
+    justify-content: flex-end;   /* Align content to the bottom */
+    align-items: flex-start;     /* Align content to the left */
+    height: 45%;                /* Ensure the section takes the full height of the viewport */
+    width: 95%;
+    color: rgb(255, 255, 255);            /* Text color */
+    text-align: left; 
+}
+
+#section6 .content {
+    display: flex;               /* Enable flexbox on the container */
+    flex-direction: column;      /* Stack elements vertically */
+    justify-content: flex-start; /* Align content to the top */
+    align-items: flex-end;       /* Align content to the right */
+    height: 70%;                /* Ensure the section takes the full height of the viewport */
+    width: 85%;
+    color: aliceblue;              /* Text color */
+    text-align: right;
+}
+
+
+/*                                               Navigation menu                                               */
+/* Hamburger Menu Icon */
+.hamburger-menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Full-Screen Navigation Menu */
+.full-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden; /* Initially hidden */
+    opacity: 0;          /* Initially fully transparent */
+    transform: scale(0); /* Initially scaled down */
+    transition: opacity 1.5s ease, visibility 1s 1.5s, transform 1.5s ease;
+    z-index: 5;
+}
+
+/* When the menu is open */
+.full-menu.open {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(2.5); /* Scale up to full size */
+    transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+/* Menu Items */
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu-items a {
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.menu-items a:hover {
+    color: #ff6347; /* Hover effect */
+}
+
