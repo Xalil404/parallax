@@ -1,2 +1,2 @@
-# New Web Projects Template
-Use this template when creating new web applications.
+# Parallax Websites
+This project is a collection of several parallax website pages.
