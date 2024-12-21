@@ -1,5 +1,7 @@
+/*                                                   Los Angeles                                               */
 let currentSection = 0;
 let isScrolling = false;
+
 
 window.addEventListener('wheel', function(event) {
     if (!isScrolling) {
@@ -36,7 +38,7 @@ updateSection(document.querySelectorAll('.section'));
 
 
 
-/* Navigation */
+/*                                                   Navigation                                               */
 // Toggle full menu visibility
 function toggleMenu() {
     var menu = document.getElementById('fullMenu');
@@ -69,47 +71,17 @@ function navigateToSection(sectionId) {
 
 
 
-// JavaScript for New York Page Interactivity
-// JavaScript to Handle Page Scroll Behavior
-document.addEventListener('DOMContentLoaded', function () {
-    let pages = document.querySelectorAll('.parallax-page');
-    let currentPage = 0;
-    let isScrolling = false;
 
-    // Disable page scroll to ensure custom scroll handling
-    document.body.style.overflow = 'hidden';
 
-    // Set up scroll event listener
-    window.addEventListener('wheel', function (event) {
-        if (isScrolling) return; // Prevent multiple scrolls at once
-        isScrolling = true;
 
-        if (event.deltaY > 0) {
-            // Scroll down (next page)
-            if (currentPage < pages.length - 1) {
-                currentPage++;
-            }
-        } else {
-            // Scroll up (previous page)
-            if (currentPage > 0) {
-                currentPage--;
-            }
-        }
 
-        // Scroll to the current page
-        scrollToPage(currentPage);
 
-        // Allow scrolling after transition is finished
-        setTimeout(() => {
-            isScrolling = false;
-        }, 1000); // Matches the transition duration (1s)
-    });
 
-    // Scroll to a specific page
-    function scrollToPage(pageIndex) {
-        window.scrollTo({
-            top: pages[pageIndex].offsetTop,
-            behavior: 'smooth'
-        });
-    }
-});
+
+
+
+
+
+
+
+
