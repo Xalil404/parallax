@@ -10,7 +10,7 @@ Link to live site [here](https://xalil404.github.io/parallax/).
 
 * Left to right scrolling between pages.
 <p align="center">
-<img src="https://res.cloudinary.com/dnbbm9vzi/image/upload/v1734863751/Screenshot_2024-12-22_at_10.35.06_AM_piv9br.png" width="auto" height="auto" alt="Scrolling"></p>
+<img src="media/one.png" width="auto" height="auto" alt="Scrolling"></p>
 
 
 * Full page navigation menu.
